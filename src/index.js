@@ -16,7 +16,20 @@ const handlers = {
                     .audioPlayerPlay(behavior, url, token, expectedPreviousToken, offsetInMilliseconds);
         // this.response.audioPlayerPlay(behavior, url, token, expectedPreviousToken, offsetInMilliseconds);
         this.emit(':responseReady');
-    }
+    },
+
+    'AMAZON.PauseIntent': function () {
+     this.emit('AMAZON.StopIntent');
+    },
+
+    'AMAZON.CancelIntent': function () {
+     this.emit('AMAZON.StopIntent');
+    },
+
+    'AMAZON.StopIntent': function () {
+     controller.stop.call(this, this.t('STOP_MSG'))
+    },
+
 };
 
 // Export
