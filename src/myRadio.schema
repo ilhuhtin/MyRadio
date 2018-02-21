@@ -1,0 +1,16 @@
+{
+  "intents": [
+    {
+      "intent": "LaunchBassoRadio"
+    },
+    {
+      "intent": "AMAZON.PauseIntent"
+    },
+    {
+      "intent": "AMAZON.ResumeIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    }
+  ]
+}
